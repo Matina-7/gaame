@@ -3,14 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
+    <title>Siamese Cat Adventure</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <canvas id="gameCanvas"></canvas>
-        <div id="score">Score: 0</div>
-    </div>
-    <script src="game.js"></script>
+
+<!-- Start Screen -->
+<div id="startScreen">
+    <h1>Siamese Cat Adventure</h1>
+    <button id="startBtn">Start Game</button>
+</div>
+
+<!-- Game HUD -->
+<div id="hud">
+    <div id="controls">W: Jump / Double Jump · A: Left · D: Right · Shift: Dash (only with item)</div>
+    <div id="coinCount">Coins: 0 / 10</div>
+    <div id="timer">Time: 0</div>
+</div>
+
+<!-- Dialogue Box -->
+<div id="dialogueBox">
+    <p id="dialogueText">You found something interesting!</p>
+    <button class="choiceBtn" data-item="spring">Spring (Higher Jump)</button>
+    <button class="choiceBtn" data-item="fish">Fish Snack (Speed Boost)</button>
+    <button class="choiceBtn" data-item="balloon">Balloon (Slow Fall)</button>
+</div>
+
+<!-- Game Canvas -->
+<canvas id="gameCanvas" width="1200" height="600"></canvas>
+
+<!-- Ending Animation -->
+<div id="endingScreen">
+    <h2>You Made It!</h2>
+    <p id="endingMessage">Thank you for joining the adventure!</p>
+    <button id="restartBtn">Play Again</button>
+</div>
+
+<script src="game.js"></script>
+
 </body>
 </html>
